@@ -1,0 +1,48 @@
+2020-01-13 10:45:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:617)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1571)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1547)
+	at org.h2.jdbc.JdbcConnection.clearWarnings(JdbcConnection.java:708)
+	at com.zaxxer.hikari.pool.ProxyConnection.close(ProxyConnection.java:246)
+	at org.ballerinalang.jvm.TableResourceManager.gracefullyReleaseResources(TableResourceManager.java:111)
+	at org.ballerinax.jdbc.table.SQLDataIterator.close(SQLDataIterator.java:87)
+	at org.ballerinalang.jvm.values.TableValue.finalize(TableValue.java:464)
+	at java.lang.System$2.invokeFinalize(System.java:1270)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:102)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:34)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:217)
+2020-01-13 10:49:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:617)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1571)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1547)
+	at org.h2.jdbc.JdbcConnection.clearWarnings(JdbcConnection.java:708)
+	at com.zaxxer.hikari.pool.ProxyConnection.close(ProxyConnection.java:246)
+	at org.ballerinalang.jvm.TableResourceManager.gracefullyReleaseResources(TableResourceManager.java:111)
+	at org.ballerinax.jdbc.table.SQLDataIterator.close(SQLDataIterator.java:87)
+	at org.ballerinalang.jvm.values.TableValue.finalize(TableValue.java:464)
+	at java.lang.System$2.invokeFinalize(System.java:1270)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:102)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:34)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:217)
+2020-01-13 13:31:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "STUDENTS" not found; SQL statement:
+INSERT INTO STUDENTS (NAMEWITHINITIAL, FULLNAME, GENDER, ADDRESS) VALUES (?, ?, ?, ?) [42102-199]
+2020-01-13 13:31:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "STUDENTS" not found; SQL statement:
+SELECT * FROM STUDENTS [42102-199]
+2020-01-13 13:36:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "STUDENTS" already exists; SQL statement:
+CREATE TABLE STUDENTS (NAMEWITHINITIAL VARCHAR(50), FULLNAME VARCHAR(100), GENDER VARCHAR(6), ADDRESS VARCHAR(50)) [42101-199]
+2020-01-13 13:38:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "STUDENTS" already exists; SQL statement:
+CREATE TABLE STUDENTS (NAMEWITHINITIAL VARCHAR(50), FULLNAME VARCHAR(100), GENDER VARCHAR(6), ADDRESS VARCHAR(50)) [42101-199]
